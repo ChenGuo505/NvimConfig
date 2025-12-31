@@ -7,6 +7,9 @@ vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("i", "<C-l>", "<Right>")
 
+-- Searching
+vim.keymap.set("n", "<leader>nl", ":noh<CR>", { desc = "[Nvim] Toggle search highlight" })
+
 -- Quik save and quit
 vim.keymap.set("n", "ww", ":w<CR>", { desc = "[Nvim] Save file" })
 vim.keymap.set("n", "qq", ":q<CR>", { desc = "[Nvim] Quit window" })
