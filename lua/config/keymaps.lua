@@ -59,4 +59,8 @@ vim.keymap.set("n", "<leader>sb", ":Telescope current_buffer_fuzzy_find<CR>",
 vim.keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { desc = "[Todo-Comments] Find todos" })
 
 -- CodeCompanion mappings
-vim.keymap.set("n", "<leader>cc", ":CodeCompanion<CR>", { desc = "[CodeCompanion] Open CodeCompanion" })
+vim.keymap.set("n", "<leader>cca", ":CodeCompanionAction<CR>", { desc = "[CodeCompanion] Open CodeCompanion action" })
+vim.keymap.set({ "n", "x" }, "<leader>cci", ":CodeCompanion<CR>", { desc = "[CodeCompanion] Open CodeCompanion inline" })
+vim.keymap.set("n", "<leader>ccc", ":CodeCompanionChat Toggle<CR>", { desc = "[CodeCompanion] Open CodeCompanion chat" })
+vim.keymap.set({ "n", "x" }, "<leader>ccp", ":CodeCompanionChat Add<CR>",
+	{ desc = "[CodeCompanion] Open CodeCompanion chat with code" })
