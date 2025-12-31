@@ -54,3 +54,6 @@ vim.keymap.set("n", "<leader>sf", ":Telescope find_files<CR>", { desc = "[Telesc
 vim.keymap.set("n", "<leader>sw", ":Telescope live_grep<CR>", { desc = "[Telescope] Search text in project" })
 vim.keymap.set("n", "<leader>sb", ":Telescope current_buffer_fuzzy_find<CR>",
 	{ desc = "[Telescope] Search text in current buffer" })
+
+-- Todo-comments mappings
+vim.keymap.set("n", "<leader>tt", ":TodoTelescope<CR>", { desc = "[Todo-Comments] Find todos" })
