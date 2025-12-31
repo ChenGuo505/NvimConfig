@@ -1,10 +1,19 @@
 return {
 	'saghen/blink.cmp',
-	dependencies = { 'rafamadriz/friendly-snippets' },
+	dependencies = {
+		'rafamadriz/friendly-snippets',
+		'fang2hou/blink-copilot',
+	},
 
 	version = '1.*',
 	opts = {
-		keymap = { preset = 'super-tab' },
+		keymap = {
+			preset = 'super-tab',
+			["<A-j>"] = { function(cmp) return cmp.select_next({ auto_insert = false }) end, "fallback", },
+			["<A-k>"] = { function(cmp) return cmp.select_prev({ auto_insert = false }) end, "fallback", },
+			["<C-u>"] = { "scroll_documentation_up", "fallback" },
+			["<C-d>"] = { "scroll_documentation_down", "fallback" },
+		},
 
 		appearance = {
 			nerd_font_variant = 'normal'
@@ -25,7 +34,15 @@ return {
 		},
 
 		sources = {
-			default = { 'lsp', 'path', 'snippets', 'buffer' },
+			default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
+			providers = {
+				copilot = {
+					name = "copilot",
+					module = "blink-copilot",
+					score_offset = 100,
+					async = true,
+				},
+			}
 		},
 
 		fuzzy = { implementation = "prefer_rust_with_warning" }
