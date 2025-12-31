@@ -50,4 +50,7 @@ vim.keymap.set("n", "<A-9>", "<CMD>BufferGoto 9<CR>", { desc = "[Buffer] BufferG
 vim.keymap.set("n", "<A-w>", "<CMD>BufferClose<CR>", { desc = "[Buffer] BufferClose" })
 
 -- Telescope mappings
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "[Telescope] Find files" })
+vim.keymap.set("n", "<leader>sf", ":Telescope find_files<CR>", { desc = "[Telescope] Find files" })
+vim.keymap.set("n", "<leader>sw", ":Telescope live_grep<CR>", { desc = "[Telescope] Search text in project" })
+vim.keymap.set("n", "<leader>sb", ":Telescope current_buffer_fuzzy_find<CR>",
+	{ desc = "[Telescope] Search text in current buffer" })
