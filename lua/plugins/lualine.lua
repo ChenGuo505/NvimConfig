@@ -16,10 +16,5 @@ return {
 			lualine_y = { "encoding", "fileformat", "filetype", "progress" },
 			lualine_z = { "location" },
 		},
-		inactive_winbar = {
-			-- Always show winbar
-			-- stylua: ignore
-			lualine_b = { function() return " " end, },
-		},
 	},
 }
