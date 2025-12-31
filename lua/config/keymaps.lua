@@ -7,6 +7,10 @@ vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("i", "<C-l>", "<Right>")
 
+-- Quik save and quit
+vim.keymap.set("n", "ww", ":w<CR>", { desc = "[Nvim] Save file" })
+vim.keymap.set("n", "qq", ":q<CR>", { desc = "[Nvim] Quit window" })
+
 -- Quik moving
 vim.keymap.set({ "n", "x", "o" }, "<S-H>", "^")
 vim.keymap.set({ "n", "x", "o" }, "<S-L>", "$")
@@ -14,6 +18,10 @@ vim.keymap.set({ "n", "x", "o" }, "<S-L>", "$")
 -- Quik comment
 vim.keymap.set("n", "<leader>/", "gcc", { desc = "[Nvim] Toggle comment", remap = true })
 vim.keymap.set("x", "<leader>/", "gc", { desc = "[Nvim] Toggle comment", remap = true })
+
+-- Package manager
+vim.keymap.set("n", "<leader>L", ":Lazy<CR>", { desc = "[Lazy] Open lazy.nvim" })
+vim.keymap.set("n", "<leader>M", ":Mason<CR>", { desc = "[Mason] Open mason.nvim" })
 
 -- nvim-tree mapping
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "[NvimTree] NvimTreeToggle" })
@@ -37,3 +45,6 @@ vim.keymap.set("n", "<A-7>", "<CMD>BufferGoto 7<CR>", { desc = "[Buffer] BufferG
 vim.keymap.set("n", "<A-8>", "<CMD>BufferGoto 8<CR>", { desc = "[Buffer] BufferGoto 8" })
 vim.keymap.set("n", "<A-9>", "<CMD>BufferGoto 9<CR>", { desc = "[Buffer] BufferGoto 9" })
 vim.keymap.set("n", "<A-w>", "<CMD>BufferClose<CR>", { desc = "[Buffer] BufferClose" })
+
+-- Telescope mappings
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "[Telescope] Find files" })
