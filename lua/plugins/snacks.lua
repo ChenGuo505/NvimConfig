@@ -19,5 +19,32 @@ return {
 		scroll = { enabled = true },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
+		lazygit = {
+			enabled = true,
+			configure = false,
+		},
+		terminal = { enabled = true },
+		styles = {
+			terminal = {
+				relative = "editor",
+				border = "rounded",
+				position = "float",
+				backdrop = 60,
+				height = 0.9,
+				width = 0.9,
+				zindex = 50,
+			},
+		},
 	},
+
+	keys = {
+		-- terminal
+		{ "<A-i>",       function() require("snacks").terminal() end,        desc = "[Snacks] Toggle terminal", mode = { "n", "t" } },
+		-- git
+		{ "<C-g>",       function() require("snacks").lazygit() end,         desc = "[Snacks] Lazygit" },
+		{ "<leader>ggl", function() require("snacks").picker.git_log() end,  desc = "[Snacks] Git log" },
+		{ "<leader>ggd", function() require("snacks").picker.git_diff() end, desc = "[Snacks] Git diff" },
+		{ "<leader>ggb", function() require("snacks").git.blame_line() end,  desc = "[Snacks] Git blame line" },
+		{ "<leader>ggB", function() require("snacks").gitbrowse() end,       desc = "[Snacks] Git browse" },
+	}
 }
