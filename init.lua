@@ -18,6 +18,10 @@ vim.opt.listchars = { tab = ">-", trail = "-" }
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Window location
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- Import modules
 require("config.lazy")
 require("config.keymaps")
