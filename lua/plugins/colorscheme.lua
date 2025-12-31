@@ -28,6 +28,19 @@ return {
 			mason = true,
 			noice = true,
 			nvimtree = true
-		}
+		},
+		style = {
+			comments = { "italic" },
+			functions = { "bold" },
+			keywords = { "italic" },
+			variables = {},
+			conditionals = { "italic" },
+			loops = {},
+			numbers = {},
+			booleans = { "bold" },
+			strings = {},
+			types = { "bold" },
+			operators = {},
+		},
 	}
 }
