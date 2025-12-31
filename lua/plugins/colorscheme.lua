@@ -5,6 +5,20 @@ return {
 	opts = {
 		flavour = "mocha",
 		transparent_background = true,
+		float = {
+			transparent = true,
+		},
+		custom_highlights = function(colors)
+			-- stylua: ignore
+			return {
+				LineNr     = { fg = colors.surface2 },
+				Visual     = { bg = colors.overlay0 },
+				Search     = { bg = colors.surface2 },
+				IncSearch  = { bg = colors.mauve },
+				CurSearch  = { bg = colors.mauve },
+				MatchParen = { bg = colors.mauve, fg = colors.base, bold = true },
+			}
+		end,
 		integrations = {
 			barbar = true,
 			blink_cmp = {

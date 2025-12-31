@@ -4,7 +4,11 @@ return {
 	dependencies = {
 		{
 			"mason-org/mason.nvim",
-			opts = {}
+			opts = {
+				ui = {
+					border = "rounded"
+				}
+			}
 		},
 		{
 			"neovim/nvim-lspconfig",
