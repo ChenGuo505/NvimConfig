@@ -1,6 +1,9 @@
 return {
 	'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	dependencies = {
+		'nvim-tree/nvim-web-devicons',
+		'AndreM222/copilot-lualine',
+	},
 	opts = {
 		options = {
 			theme = "catppuccin",
@@ -12,7 +15,7 @@ return {
 			lualine_a = { "mode" },
 			lualine_b = { "branch", "diff", "diagnostics" },
 			lualine_c = { "filename" },
-			lualine_x = {},
+			lualine_x = { "copilot" },
 			lualine_y = { "encoding", "fileformat", "filetype", "progress" },
 			lualine_z = { "location" },
 		},
